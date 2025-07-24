@@ -1,0 +1,58 @@
+/* dropdown_style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f7f9fc;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+select {
+    padding: 12px 15px; /* Tăng padding để dễ bấm hơn */
+    border: 2px solid #007bff; /* Viền xanh nổi bật */
+    border-radius: 8px; /* Bo tròn góc */
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    appearance: none; /* Ẩn mũi tên mặc định của trình duyệt */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 250px; /* Chiều rộng cố định */
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none; /* Loại bỏ outline khi focus */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-6.5H18.6c-5.4%200-10.4%202.1-14.2%205.9-3.8%203.8-5.9%208.7-5.9%2014.2%200%2010.3%208.5%2018.8%2018.8%2018.8h253.9c5.4%200%2010.4-2.1%2014.2-5.9%203.8-3.8%205.9-8.7%205.9-14.2%200-10.3-8.5-18.8-18.8-18.8z%22%2F%3E%3C%2Fsvg%3E'); /* Tùy chỉnh mũi tên */
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 12px auto;
+}
+
+select:hover {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Tùy chỉnh mũi tên dropdown cho Chrome/Safari */
+select::-ms-expand {
+    display: none; /* Ẩn mũi tên mặc định của IE/Edge */
+}

@@ -1,0 +1,121 @@
+/* helper_style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #f7f7f7;
+}
+
+.section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Ví dụ Z-index */
+.z-index-container {
+    position: relative; /* Container cần có position khác static */
+    height: 120px;
+    background-color: #f0f8ff;
+    border: 1px dashed #aed6f1;
+    padding: 10px;
+}
+
+.box-z {
+    width: 80px;
+    height: 80px;
+    position: absolute; /* Phải có position khác static để z-index hoạt động */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.box1 {
+    background-color: #e74c3c;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* Nằm trên box2 */
+}
+
+.box2 {
+    background-color: #3498db;
+    top: 40px;
+    left: 50px;
+    z-index: 1; /* Nằm dưới box1 */
+}
+
+/* Ví dụ Overflow */
+.overflow-box {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #28a745;
+    background-color: #e6ffe6;
+    padding: 10px;
+    overflow: auto; /* Thêm thanh cuộn khi nội dung tràn */
+}
+
+/* Ví dụ align-self */
+.flex-container-align-self {
+    display: flex;
+    height: 150px; /* Cho đủ không gian để căn chỉnh */
+    border: 1px solid #f39c12;
+    background-color: #fff8e1;
+    align-items: flex-end; /* Mặc định tất cả item căn cuối trục phụ */
+}
+
+.flex-item {
+    width: 70px;
+    height: 70px;
+    background-color: #feca57;
+    border: 1px solid #e67e22;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.flex-item.specific {
+    align-self: flex-start; /* Riêng item này căn đầu trục phụ */
+    background-color: #eb4d4b;
+}
+
+/* Ví dụ justify-self trong Grid */
+.grid-container-justify-self {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 100px;
+    border: 1px solid #9b59b6;
+    background-color: #f8f0ff;
+    place-items: center start; /* Căn giữa theo chiều dọc, căn trái theo chiều ngang */
+}
+
+.grid-item {
+    width: 80px;
+    height: 80px;
+    background-color: #bdc3c7;
+    border: 1px solid #7f8c8d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.grid-item.specific-justify {
+    justify-self: end; /* Riêng item này căn cuối theo chiều ngang */
+    background-color: #1abc9c;
+}
